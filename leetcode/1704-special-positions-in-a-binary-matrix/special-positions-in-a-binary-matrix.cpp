@@ -1,5 +1,6 @@
 class Solution {
 public:
+
     bool oneCheck(vector<vector<int>>& mat, int i, int j) {
 
         int count = 0;
