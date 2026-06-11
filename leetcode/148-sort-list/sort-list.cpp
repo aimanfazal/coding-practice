@@ -11,7 +11,7 @@
 class Solution {
 public:
 
-    ListNode* merged(ListNode* left, ListNode* right) {
+    ListNode* merged(ListNode* &left, ListNode* &right) {
         if (!left) return right;
         if (!right) return left;
 
@@ -39,7 +39,7 @@ public:
         return ans->next;
     }
 
-    ListNode* findMid(ListNode* head) {
+    ListNode* findMid(ListNode* &head) {
         ListNode* slow = head;
         ListNode* fast = head->next;
         while (fast != 0 && fast->next != 0) {
@@ -49,7 +49,7 @@ public:
         return slow;
     }
 
-    ListNode* sortList(ListNode* head) {
+    ListNode* sortList(ListNode* &head) {
         if (head == 0 || head->next == 0)
             return head;
 
