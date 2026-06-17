@@ -27,26 +27,6 @@ Problems in this repository may come from platforms like:
 
 ---
 
-## 📂 Repository Structure
-
-The repository is organized by platform, topic, or problem type.
-
-```
-coding-practise/
-│
-├── leetcode/
-├── codeforces/
-├── hackerrank/
-├── algorithms/
-├── data-structures/
-├── small-problems/
-└── templates/
-```
-
-Each folder contains implementations and solutions related to that category.
-
----
-
 ## 🧠 Topics Covered
 
 Some of the common topics included in this repository:
