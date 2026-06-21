@@ -5,13 +5,14 @@ public:
         deque<int> dq;
 
         for (int i = 0; i < nums.size(); i++) {
+            // check for out of window elements:
+            while (!dq.empty() && dq.front() <= i - k)
+                dq.pop_front();
 
             // check for smaller elements:
             while (!dq.empty() && nums[i] >= nums[dq.back()])
                 dq.pop_back();
-            // check for out of window elements:
-            while (!dq.empty() && dq.front() <= i - k)
-                dq.pop_front();
+
             dq.push_back(i);
 
             // store answer after the first window:
