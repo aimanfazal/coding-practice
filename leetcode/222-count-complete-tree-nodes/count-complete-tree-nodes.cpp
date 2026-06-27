@@ -12,18 +12,21 @@
 class Solution {
 private:
     void levelOrder(TreeNode* root, int &ans) {
+        if (!root)
+            return;
+
         queue<TreeNode*> q;
         q.push(root);
 
         while (!q.empty()) {
             TreeNode* temp = q.front();
-            if (temp)
                 ans++;
             q.pop();
-            if (temp && temp->left)
-                levelOrder(temp->left, ans);
-            if(temp && temp->right)
-                levelOrder(temp->right, ans);
+
+            if (temp->left)
+                q.push(temp->left);
+            if (temp->right)
+                q.push(temp->right);
         }
     }
 
